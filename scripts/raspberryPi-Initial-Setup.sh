@@ -35,6 +35,7 @@ cond_fail="${RESET}[ ${RED}✖${RESET} ]"
 
 # splash screen
 clear
+echo -e "\e[0m\c"
 echo -e "${ORANGE1}""    ,"
 echo -e "${ORANGE1}"'  ."|".     '"${RESET}"'┌─┐┬─┐┌─┐   ┬  ┌─┐┌─┐┌─┐'
 echo -e "${ORANGE2}"" / \|/ \    ""${RESET}""└─┐├┬┘│  ───│  ├┤ ├─┤├┤ "
