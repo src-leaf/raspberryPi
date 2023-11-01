@@ -3,9 +3,6 @@
 # === raspberryPi-Initial-Setup.sh ===
 # Bash script to set up the Raspberry Pi after fresh install and install commanly / useful cli tools 
 
-# === To use ===
-# $ curl https://raw.githubusercontent.com/src-leaf/raspberryPi/main/scripts/raspberryPi-Initial-Setup.sh?token=GHSAT0AAAAAACJQVOXFKAH6YKB57VVS5QSMZKCYC2Q | bash
-
 # === CREDITS ===
 # Leaf ascii art: https://www.deviantart.com/pigeonsnatcher/art/Ascii-art-leaf-954408024
 # Ascii art text: https://patorjk.com/software/taag/#p=display&f=Calvin%20S&t=src-leaf
@@ -16,6 +13,7 @@
 # tmux          --  https://github.com/tmux/tmux 
 # timeshfit     --  https://github.com/teejee2008/timeshift
 # fuzzy finder  --  https://github.com/junegunn/fzf
+
 
 
 #Colors / Formating 
@@ -35,7 +33,7 @@ cond_fail="${RESET}[ ${RED}✖${RESET} ]"
 
 
 
-# Menu
+# splash screen
 clear
 echo -e "${ORANGE1}""    ,"
 echo -e "${ORANGE1}"'  ."|".     '"${RESET}"'┌─┐┬─┐┌─┐   ┬  ┌─┐┌─┐┌─┐'
@@ -49,7 +47,8 @@ echo ""
 echo -e "${ORANGE1}"$USER"${ORANGE2}@""${ORANGE3}"$HOSTNAME"${RESET}"
 
 
-#Housekeeping
+
+# Main code
 run_command() {
     local cmd="$1"
     local description="$2"
@@ -63,11 +62,13 @@ run_command() {
     fi
 }
 
+# apt-get
 run_command "sudo apt-get update" "apt-get: update"
 run_command "sudo apt-get upgrade -y" "apt-get: upgrade"
 run_command "sudo apt-get autoremove -y" "apt-get: autoremove"
 run_command "sudo apt-get clean -y" "apt-get: clean"
 
+# cli tool installs
 run_command "sudo apt-get install htop -y" "Installing: htop"
 run_command "sudo apt-get install neofetch -y" "Installing: Neofetch"
 run_command "sudo apt-get install tmux -y" "Installing: tmux"
