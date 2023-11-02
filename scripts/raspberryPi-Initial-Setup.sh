@@ -3,6 +3,9 @@
 # === raspberryPi-Initial-Setup.sh ===
 # Bash script to set up the Raspberry Pi after fresh install and install commanly / useful cli tools 
 
+# === To Use ===
+# curl https://raw.githubusercontent.com/src-leaf/raspberryPi/main/scripts/raspberryPi-Initial-Setup.sh | bash
+
 # === CREDITS ===
 # Leaf ascii art: https://www.deviantart.com/pigeonsnatcher/art/Ascii-art-leaf-954408024
 # Ascii art text: https://patorjk.com/software/taag/#p=display&f=Calvin%20S&t=src-leaf
